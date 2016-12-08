@@ -21,6 +21,7 @@
         $('nav').toggleClass('open');
     });
 
+    // Need to write a function for this for the menu up top
     $('.cta').on('click', function(){
         var id = this.getAttribute('data-target');
         $('section#' + id).toggleClass('active');
