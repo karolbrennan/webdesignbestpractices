@@ -1,10 +1,8 @@
-<?php require("../includes/header.php"); ?>
-
-<div class="row">
-    <div class="small-12 columns">
-        <article>
-        <h1>Planning</h1>
-            <section>
+<section id="planning">
+    <div class="row">
+        <div class="small-12 columns">
+            <article>
+            <h1>Planning</h1>
                 <h2>Start off on the right foot.</h2>
                 <aside>
                     <h5>Jumping In</h5>
@@ -44,10 +42,8 @@
                 <p>Task flows consist of determining what the primary tasks are on the existing site, documenting how they are presently achieved, and pinpointing any potential improvement areas.</p>
                 <h4>So never think that a redesign should be "simple"</h4>
                 <p>So much more goes into a redesign than just changing the color palette and layout. And tackling it head-on with a full plan will allow for accurate quotes/estimates, ensuring that you don't short-change yourself.</p>
-                <p class="text-center calltoaction"><a href="/content" class="cta">Let's Create Content!</a></p>
-            </section>
-        </article>
+                <p class="text-center calltoaction"><a href="#" data-target="content" data-section="planning" class="cta">Let's Create Content!</a></p>
+            </article>
+        </div>
     </div>
-</div>
-
-<?php require("../includes/footer.php"); ?>
+</section>

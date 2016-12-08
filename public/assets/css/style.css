@@ -1,121 +1,127 @@
+/*/--------------// Look & Feel //--------------/*/
+* {
+    outline: none;
+}
 body {
-    font-size: 1.5rem;
-    color: #444;
-}
-/* Main Sections */
-header {
-    font-size: 1.25rem;
-    text-align: center;
-    background: #2D2D2D;
-}
-header, footer {
-    padding: 2rem;
-}
-#content {
-    padding: 4rem 2rem;
-}
-footer {
-    font-size: 1rem;
-    background: #f8f8f8;
-}
-nav {
-    text-align: center;
-    background: #21C9E8;
-    font-size: 0;
-}
-nav .menu {
-    display: inline-block;
-    font-size: 1rem;
-}
-nav .menu a {
+    background: linear-gradient(rgba(35, 34, 20, 0.7), rgba(35, 34, 20, 0.7)), url(../img/desk-lauren-mancke.jpg) fixed;
+    background-blend-mode: multiply;
+    background-size: cover;
     color: #fff;
-    line-height: 1.5rem;
-}
-.menu a:hover, .menu .active>a {
-    background: #2D2D2D;
+    border-top: 0.5rem solid #fff;
+    border-bottom: 0.5rem solid #fff;
+    overflow-x: hidden;
 }
 
 
-/* Typography */
+/*/--------------// Header //--------------/*/
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+header h1 a, header h1 a:hover {
+    color: #fff;
+}
+header h1 {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+
+/*/--------------// Navigation //--------------/*/
+nav {
+    margin-top: 1rem;
+}
+nav > .menu > li > a {
+    border: 1px solid #fff;
+    border-radius: 0.2rem;
+    color: #fff;
+    text-transform: uppercase;
+    padding: .7rem 1rem !important;
+}
+nav > .menu > li > a:after {
+    display: none !important;
+}
+.is-dropdown-submenu {
+    background: transparent;
+    text-align: right;
+    border: none;
+}
+
+/*/--------------// Typography & Links //--------------/*/
+
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Oswald", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-    font-weight: 700;
-    line-height: 175%;
+    font-family: "Glass Antiqua", arial, sans-serif;
 }
-h1, .logo {
-    font-family: "Abril Fatface", "Helvetica Neue", "Helvetica", Roboto, Arial, sans-serif;
-    font-weight: normal;
-    font-size: 3rem;
+.button, nav > .menu > li > a, .cta {
+    font-family: "Montserrat", arial, sans-serif;
 }
 h1 {
-    color: #21C9E8;
+    color: #fff;
 }
 h2 {
-    color: #FFBA3B;
+    color: rgba(255, 245, 215, 0.7);
 }
-a.logo {
-    color: #fff;
-}
-a.logo:hover {
-    color: #888;
-}
-ul {
-    margin-left: 3rem;
-}
-
-
-
-/* Article Styles */
-aside {
-    float: right;
-    width: 20rem;
-    max-width: 100%;
-    border: 1px solid #efefef;
-    padding: 1rem;
-    font-size: 1rem;
-    font-style: italic;
-    margin: 0 0 2rem 2rem;
-    background: #f6f6f6;
-}
-
-/* Links */
 a {
-    color: #21C9E8;
+    color: #4e96a7;
 }
 a:hover {
-    color: #ffba3b;
+    color: #fff;
+}
+.calltoaction {
+    margin: 2rem 0;
 }
 .cta {
-    background: #ffba3b;
-    padding: 1rem 2rem;
-    color: #fff;
-    font-weight: bold;
-    border-radius: 0.5rem;
-    border-bottom: 3px solid rgb(255, 166, 0);
-    box-shadow: 0 0.2rem 0.05rem rgba(0, 0, 0, 0.16);
+    text-transform: uppercase;
+    color: #ffffff;
+    border: 2px solid #4e96a7;
+    border-radius: 0.2rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
 }
-.cta:hover, .cta:active, .cta:focus {
-    background: #ffa220;
-    color: #fff;
+.cta:hover {
+    color: rgba(255, 255, 255, 0.76);
+    border: 2px solid #467b8c;
 }
-/* Calls to Action */
-.calltoaction {
-    margin-top: 2rem;
+p {
+    font-size: 1.25rem;
 }
 
-/* Navigation */
-#menutoggle {
-    display: none;
+
+/*/--------------// Content //--------------/*/
+section {
+    position: absolute;
+    left: 100%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
+section.active {
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 35vh 0;
+    overflow: visible;
+    transition: all 2.5s ease;
+    -webkit-transition: all 2.5s ease;
+}
+
+/*/--------------// Footer //--------------/*/
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+}
+footer * {
+    font-size: 0.8rem;
+}
+
+/*/--------------// Media Queries //--------------/*/
 @media screen and (max-width: 40em){
     #menutoggle {
-        text-align: center;
         display: block;
-        vertical-align: middle;
-        background: #21C9E8;
-        color: #fff;
-        padding: 0.5rem 0;
-        font-size: 1.5rem;
     }
     nav {
         display: none;
@@ -136,39 +142,5 @@ a:hover {
     }
     .menu.float-right {
         float: none !important;
-    }
-}
-
-/* Media Queries */
-
-@media screen and (max-width: 40em){
-    body {
-        font-size: 1rem;
-    }
-    header {
-        padding: 2rem 1rem;
-    }
-    aside {
-        float: none;
-        display: block;
-        margin: 2rem auto;
-    }
-    footer, footer p {
-        text-align: center;
-    }
-    .logo {
-        font-size: 2rem;
-    }
-    #content {
-        padding: 1rem;
-    }
-    aside {
-        margin: 1rem 0;
-    }
-    ul {
-        margin-left: 2rem;
-    }
-    .cta {
-        display: block;
     }
 }

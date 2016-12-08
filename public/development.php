@@ -1,7 +1,6 @@
-<?php require("../includes/header.php"); ?>
-
-<div class="row">
-    <div class="small-12 columns">
+<section id="development">
+    <div class="row">
+        <div class="small-12 columns">
         <h1>Development</h1>
         <h2>If your site doesn't function well, people won't bother to use it.</h2>
 
@@ -58,8 +57,7 @@
             <li>Make URLs easy to read and descriptive.</li>
         </ul>
 
-        <p class="text-center calltoaction"><a href="/testing" class="cta">Time for testing!</a></p>
+        <p class="text-center calltoaction"><a href="#" data-target="testing" data-section="development" class="cta">Time for testing!</a></p>
+        </div>
     </div>
-</div>
-
-<?php require("../includes/footer.php"); ?>
+</section>

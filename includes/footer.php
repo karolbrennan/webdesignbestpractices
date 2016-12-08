@@ -1,5 +1,5 @@
 
-</section>
+</div>
 
 <footer>
     <div class="row">
@@ -20,6 +20,14 @@
     $('#menutoggle').on('click', function(){
         $('nav').toggleClass('open');
     });
+
+    $('.cta').on('click', function(){
+        var id = this.getAttribute('data-target');
+        $('section#' + id).toggleClass('active');
+        var parentId = this.getAttribute('data-section');
+        $('section#' + parentId).toggleClass('active');
+    })
+
 </script>
 
 </body>

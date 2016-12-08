@@ -9,19 +9,19 @@
     <meta name="description" content="">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/g/foundation@6.2.1(foundation.min.css),foundation-icons@3.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:700">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface">
+    <link href="https://fonts.googleapis.com/css?family=Glass+Antiqua|Montserrat|Slabo+27px" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
 <header>
     <div class="row">
-        <div class="small-12 columns">
-            <a href="/" class="logo"><?= $sitetitle; ?></a>
+        <div class="small-12 medium-8 columns">
+            <h1><a href="/" class="logo"><?= $sitetitle; ?></a></h1>
+        </div>
+        <div class="small-12 medium-4 columns">
+            <?php include("../includes/nav.php"); ?>
         </div>
     </div>
 </header>
 
-<?php include("../includes/nav.php"); ?>
-
-<section id="content">
+<div id="container">
