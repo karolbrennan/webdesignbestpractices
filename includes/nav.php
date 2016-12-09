@@ -4,15 +4,22 @@
  * Values: title, url, submenu (array of more menu items, can be nested)
  */
 $menuItems = [
-    ['name' => 'Menu', 'url' => '#', 'submenu' => [
-            ['name' => 'Planning', 'url' => '/planning', 'title' => 'Visit the planning page to learn best practices for planning a web site project'],
-            ['name' => 'Content', 'url' => '/content', 'title' => 'Visit the content page to learn best practices for generating content'],
-            ['name' => 'Design', 'url' => '/design', 'title' => 'Visit the design page to learn best practices for beautiful, effective design'],
-            ['name' => 'Development', 'url' => '/development', 'title' => 'Visit the development page to learn best practices of development'],
-            ['name' => 'Testing', 'url' => '/testing', 'title' => 'Visit the testing page to learn best practices of testing your finished site'],
-            ['name' => 'Follow Up', 'url' => '/followup', 'title' => 'Visit the follow up page to learn best practices of maintaining relationships and websites']
-        ]
-    ]
+    ['name' => 'Intro', 'url' => '#intro', 'title' => 'Lets learn the best practices for building a website!'],
+    ['name' => 'Planning', 'url' => '#planning', 'title' => 'Learn best practices for planning a web site project'],
+    ['name' => 'Content', 'url' => '#content', 'title' => 'Learn best practices for generating content'],
+    ['name' => 'Design', 'url' => '#design', 'title' => 'Learn best practices for beautiful, effective design'],
+    ['name' => 'Development', 'url' => '#development', 'title' => 'Learn best practices of development'],
+    ['name' => 'Testing', 'url' => '#testing', 'title' => 'Learn best practices of testing your finished site'],
+    ['name' => 'Follow Up', 'url' => '#followup', 'title' => 'Learn best practices of maintaining relationships and websites']
+        //    ['name' => 'Menu', 'url' => '#', 'submenu' => [
+//            ['name' => 'Planning', 'url' => '/planning', 'title' => 'Visit the planning page to learn best practices for planning a web site project'],
+//            ['name' => 'Content', 'url' => '/content', 'title' => 'Visit the content page to learn best practices for generating content'],
+//            ['name' => 'Design', 'url' => '/design', 'title' => 'Visit the design page to learn best practices for beautiful, effective design'],
+//            ['name' => 'Development', 'url' => '/development', 'title' => 'Visit the development page to learn best practices of development'],
+//            ['name' => 'Testing', 'url' => '/testing', 'title' => 'Visit the testing page to learn best practices of testing your finished site'],
+//            ['name' => 'Follow Up', 'url' => '/followup', 'title' => 'Visit the follow up page to learn best practices of maintaining relationships and websites']
+//        ]
+//    ]
 ];
 
 function getMenuItems(array $menuItems){
@@ -56,7 +63,7 @@ function getSubMenuItems(array $subMenuItems){
 
 ?>
 <nav>
-    <ul class="dropdown menu float-right" data-options='disableHover:true;clickOpen:true' data-dropdown-menu="dropdown-menu" role="menubar">
+    <ul class="dropdown menu" data-options='disableHover:true;clickOpen:true' data-dropdown-menu="dropdown-menu" role="menubar">
         <?php getMenuItems($menuItems); ?>
     </ul>
 </nav>

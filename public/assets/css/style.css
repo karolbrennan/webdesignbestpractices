@@ -7,7 +7,6 @@ body {
     background-blend-mode: multiply;
     background-size: cover;
     color: #fff;
-    border-top: 0.5rem solid #fff;
     overflow-x: hidden;
 }
 
@@ -23,20 +22,31 @@ header h1 a, header h1 a:hover {
     color: #fff;
 }
 header h1 {
-    margin: 1rem 0;
-    font-size: 1.5rem;
+    margin: 2rem 0;
+    font-size: 2rem;
 }
 
 /*/--------------// Navigation //--------------/*/
 nav {
-    margin-top: 1rem;
+    margin: 2rem 0 0;
+}
+nav > .menu {
+    margin: 0;
+    padding: 0;
+}
+nav > .menu > li {
+    display: block;
+    text-align: right;
+    padding: 0;
 }
 nav > .menu > li > a {
-    border: 1px solid #fff;
-    border-radius: 0.2rem;
     color: #fff;
     text-transform: uppercase;
-    padding: .7rem 1rem !important;
+    padding: 0.25rem 0;
+}
+nav > .menu > li > a:hover {
+    color: #b5b074;
+    font-style: italic;
 }
 nav > .menu > li > a:after {
     display: none !important;

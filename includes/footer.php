@@ -4,7 +4,6 @@
 <footer>
     <div class="row">
         <div class="small-12 medium-4 columns">
-            <p><a href="/"><?= $sitetitle; ?></a></p>
         </div>
         <div class="small-12 medium-8 columns text-right">
             <p>&copy; <?= date('Y'); ?> <a href="http://karolbrennan.com">Karol Brennan</a></p>
