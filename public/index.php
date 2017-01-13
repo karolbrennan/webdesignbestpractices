@@ -10,11 +10,11 @@
 </section>
 
 <?php
+    require_once('intro.php');
+    require_once('planning.php');
     require_once('content.php');
     require_once('design.php');
     require_once('development.php');
-    require_once('followup.php');
-    require_once('intro.php');
-    require_once('planning.php');
     require_once('testing.php');
+    require_once('followup.php');
     require("../includes/footer.php"); ?>

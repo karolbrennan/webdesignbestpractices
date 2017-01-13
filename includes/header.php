@@ -1,4 +1,4 @@
-<?php $sitetitle = 'Web Design Best Practices'; ?>
+<?php $sitetitle = 'WDBP.'; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,10 +15,8 @@
 
 <header>
     <div class="row">
-        <div class="small-12 medium-8 columns">
+        <div class="small-12 columns">
             <h1><a href="/" class="logo"><?= $sitetitle; ?></a></h1>
-        </div>
-        <div class="small-12 medium-4 columns">
             <?php include("../includes/nav.php"); ?>
         </div>
     </div>

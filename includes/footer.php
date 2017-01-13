@@ -15,19 +15,6 @@
 <script src="https://cdn.jsdelivr.net/g/foundation@6.2.1(foundation.min.js+js/foundation.dropdown.js+js/foundation.dropdownMenu.js)"></script>
 <script>
     $(document).foundation();
-
-    $('#menutoggle').on('click', function(){
-        $('nav').toggleClass('open');
-    });
-
-    // Need to write a function for this for the menu up top
-    $('.cta').on('click', function(){
-        var id = this.getAttribute('data-target');
-        $('section#' + id).toggleClass('active');
-        var parentId = this.getAttribute('data-section');
-        $('section#' + parentId).toggleClass('active');
-    })
-
 </script>
 
 </body>
