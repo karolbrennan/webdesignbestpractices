@@ -7,7 +7,7 @@
             <p><a href="/"><?= $sitetitle; ?></a></p>
         </div>
         <div class="small-12 medium-8 columns text-right">
-            <p>&copy; <?= date('Y'); ?> <a href="http://karolbrennan.com">Karol Brennan</a></p>
+            <p>&copy; 2016-<?= date('Y'); ?> <a href="http://karolbrennan.com">Karol Brennan</a></p>
         </div>
     </div>
 </footer>

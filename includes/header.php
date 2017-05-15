@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <meta property="og:image" content="assets/ogimage.png"/>
 </head>
 
 <header>
