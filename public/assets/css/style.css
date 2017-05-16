@@ -16,6 +16,9 @@ body {
 }
 
 /*/--------------// Animations //--------------/*/
+body, #index > div, .intro, #index .calltoaction, header {
+    transform: translate3d(0,0,0);
+}
 body {
     animation: load 4s ease forwards;
 }
