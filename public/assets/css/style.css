@@ -319,17 +319,17 @@ section:nth-of-type(5) a.cta:before, nav ul li:nth-of-type(5) a:before {
 }
 
 section:nth-of-type(6){
-    background: rgba(160, 107, 28, 0.98);
+    background: rgba(204, 110, 103, 0.98);
 }
 section:nth-of-type(6) a {
-    color: #dcaa5f;
+    color: #fdb6b1;
 }
 section:nth-of-type(6) a.cta {
     color: #fff;
-    border-color: #dcaa5f;
+    border-color: #a04c46;
 }
 section:nth-of-type(6) a.cta:before, nav ul li:nth-of-type(6) a:before {
-    background: #dcaa5f;
+    background: #a04c46;
 }
 /*section:nth-of-type(6){*/
     /*background: rgba(48, 36, 70, 0.98);*/
