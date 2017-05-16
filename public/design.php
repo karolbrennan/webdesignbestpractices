@@ -27,7 +27,7 @@
             <p>Recently mobile devices bypassed traditional desktop usage for browsing the internet. So it's very important to ensure an excellent experience on mobile devices while users are on the go. So here's a list of tips for mobile design:</p>
             <ul>
                 <li>Put important information first - that means addresses, phone numbers, and links to purchase items.</li>
-                <li>Do not add content to the initial landing page that isn't immediately important (remember your <a href="/planning">business requirements!</a>), instead focus on those calls to action. However, always ensure that there is a way to access it on an interior page.</li>
+                <li>Do not add content to the initial landing page that isn't immediately important (remember your <a href="#planning" class="link" data-target="planning" data-section="design">business requirements!</a>), instead focus on those calls to action. However, always ensure that there is a way to access it on an interior page.</li>
                 <li>Make the header and footer smaller. You're working with a very limited amount of space, you don't want to waste that valuable screen real estate with just branding and copyright info.</li>
                 <li>Hide the menu, replace it with a button that says Menu and can be toggled on and off so the user can use it when they want and not have to scroll by it if they don't need it.</li>
                 <li>Optimize your images, replace large images with small versions. Ensure that your site loads quickly because often mobile users are on slow connections!</li>

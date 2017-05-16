@@ -32,7 +32,7 @@
                         </ul>
                     </li>
                 </ul>
-                <p>These are just a few of the questions you should be asking yourself. By answering these questions, you can further determine what kind of <a href="/content" title="Visit the content page to learn the best practices for generating content">content</a> you'll need to create. Also they help determine the best way to reach your target audience.</p>
+                <p>These are just a few of the questions you should be asking yourself. By answering these questions, you can further determine what kind of <a class="link" href="#content" data-target="content" data-section="planning" title="Visit the content page to learn the best practices for generating content">content</a> you'll need to create. Also they help determine the best way to reach your target audience.</p>
 
                 <h3>Yeah, But What About Simple Redesigns?</h3>
                 <p>There's no such thing. Even if the site you're building is just a refresher of a site that already exists, you should be going through the planning process to ensure that the new site meets all of the business's needs. The target audience may have changed, there may be new accessibility issues you need to address, new features to address needs not currently being met, or content may have changed and SEO is no longer accurate.</p>
@@ -42,7 +42,7 @@
                 <p>Task flows consist of determining what the primary tasks are on the existing site, documenting how they are presently achieved, and pinpointing any potential improvement areas.</p>
                 <h4>So never think that a redesign should be "simple"</h4>
                 <p>So much more goes into a redesign than just changing the color palette and layout. And tackling it head-on with a full plan will allow for accurate quotes/estimates, ensuring that you don't short-change yourself.</p>
-                <p class="text-center calltoaction"><a href="#" data-target="content" data-section="planning" class="cta">Let's Create Content!</a></p>
+                <p class="text-center calltoaction"><a href="#content" data-target="content" data-section="planning" class="cta">Let's Create Content!</a></p>
             </article>
         </div>
     </div>
