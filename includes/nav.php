@@ -4,7 +4,7 @@
  * Values: title, url, submenu (array of more menu items, can be nested)
  */
 $menuItems = [
-//    ['name' => 'Intro', 'url' => '#intro', 'title' => 'Lets learn the best practices for building a website!', 'data-target' => 'intro'],
+    ['name' => 'Index', 'url' => '#index', 'title' => 'Lets learn the best practices for building a website!', 'data-target' => 'index'],
     ['name' => 'Planning', 'url' => '#planning', 'title' => 'Learn best practices for planning a web site project', 'data-target' => 'planning'],
     ['name' => 'Content', 'url' => '#content', 'title' => 'Learn best practices for generating content', 'data-target' => 'content'],
     ['name' => 'Design', 'url' => '#design', 'title' => 'Learn best practices for beautiful, effective design', 'data-target' => 'design'],
@@ -18,7 +18,7 @@ $menuItems = [
     <ul>
         <?php
             foreach($menuItems as $menuItem) {
-                echo "<li {$menuItem['class']} role='menuitem'><a href='{$menuItem['url']}' class='nav-item' title='{$menuItem['title']}' data-target='{$menuItem['data-target']}'>{$menuItem['name']}</a></li>";
+                echo "<li {$menuItem['class']} role='menuitem'><a class='nav-item' title='{$menuItem['title']}' data-target='{$menuItem['data-target']}'>{$menuItem['name']}</a></li>";
             }
         ?>
     </ul>

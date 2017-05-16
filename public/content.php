@@ -17,8 +17,8 @@
             <h4>Gather content first</h4>
             <p>As soon as the planning stage is over, you should be generating your content or getting it from your client. At the very least you need to have an outline of what the major blocks of content will exist, how many pages, and if they will require separate layouts so you can plug in some filler text to get a good feel for how the site will look and you can begin the design phase.</p>
             <h3>What About SEO?</h3>
-            <p>Ah, yes, the hot topic that everyone wants to talk about. This is possibly the biggest part of content creation. Before you / your client begins generating content, you should start planning for search engine optimization. For tips on climbing to the top of the search engine result pages check out the <a href="#development" class="link" data-target="development" data-section="content" title="Visit the development page for more information on search engine optimization">development</a> page!</p><br>
-            <p class="text-center calltoaction"><a href="#" data-target="design" data-section="content" class="cta">It's Time To Talk Design!</a></p>
+            <p>Ah, yes, the hot topic that everyone wants to talk about. This is possibly the biggest part of content creation. Before you / your client begins generating content, you should start planning for search engine optimization. For tips on climbing to the top of the search engine result pages check out the <a class="link" data-target="development" data-section="content" title="Visit the development page for more information on search engine optimization">development</a> page!</p>
+            <p class="text-center calltoaction"><a data-target="design" data-section="content" class="cta">It's Time To Talk Design!</a></p>
         </div>
     </div>
 </section>

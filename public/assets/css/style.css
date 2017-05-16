@@ -1,4 +1,4 @@
-/*/--------------// Look & Feel //--------------/*/
+/*/--------------// Basic Fixes //--------------/*/
 * {
     outline: none;
 }
@@ -6,7 +6,6 @@ body {
     background: #c1b298;
     color: #fff;
     overflow: hidden !important;
-    animation: load 4s ease forwards;
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -14,7 +13,26 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
+}
 
+/*/--------------// Animations //--------------/*/
+body {
+    animation: load 4s ease forwards;
+}
+#index > div {
+    opacity: 0;
+    animation: load 4s ease 2s forwards;
+}
+.intro {
+    opacity: 0;
+    animation: load 4s ease 4s forwards;
+}
+#index .calltoaction {
+    opacity: 0;
+    animation: load 4s ease 6s forwards;
+}
+header {
+    animation: load 15s ease 0s forwards;
 }
 @keyframes load {
     0% {
@@ -44,21 +62,6 @@ body {
         opacity: 1;
     }
 }
-#index > div {
-    opacity: 0;
-    animation: load 4s ease 2s forwards;
-}
-.intro {
-    opacity: 0;
-    animation: load 4s ease 4s forwards;
-}
-#index .calltoaction {
-    opacity: 0;
-    animation: load 4s ease 6s forwards;
-}
-header {
-    animation: load 15s ease 0s forwards;
-}
 
 /*/--------------// Header //--------------/*/
 header {
@@ -67,6 +70,10 @@ header {
     width: 100%;
     z-index: 99999;
     padding: 1rem 0;
+    transition: all 1s ease;
+}
+header.fixed {
+    /*background: rgba(51, 51, 51, 0.7);*/
 }
 header h1 a, header h1 a:hover {
     color: #fff;
@@ -93,6 +100,7 @@ nav ul {
     margin: 0;
     padding: 0;
 }
+nav ul li:first-of-type { display: none; }
 nav ul li {
     display: inline-block;
     vertical-align: top;
@@ -139,9 +147,10 @@ h2 {
 }
 a {
     color: #4e96a7;
+    transition: all 0.5s ease;
 }
 a:hover, a:focus, a:active {
-    color: #fff;
+    color: #fff !important;
 }
 .calltoaction {
     margin: 2rem 0;
@@ -156,7 +165,8 @@ a:hover, a:focus, a:active {
     transition: all 1s ease 1s;
     position: relative;
     overflow: hidden;
-    white-space: nowrap;
+    white-space: normal;
+    word-wrap: break-word;
     display: inline-block;
 }
 .cta:before {
@@ -170,10 +180,10 @@ a:hover, a:focus, a:active {
     transition: all 1s ease 0.25s;
     z-index: -1;
 }
-.cta:hover:before {
+.cta:hover:before, .cta:active:before, .cta:focus:before {
     left: 0;
 }
-.cta:hover {
+.cta:hover, .cta:hover:before {
     color: #fff;
     cursor: pointer;
 }
@@ -201,7 +211,7 @@ section.focus {
     overflow-y: scroll;
 }
 section.unfocus {
-    transition: all 0.5s ease 0.25s;
+    transition: all 1.5s ease 0.5s;
     left: 0;
     right: 0;
     bottom: -100vh;
@@ -227,7 +237,7 @@ aside {
     float: right;
     width: 18rem;
     margin: 1rem 0 1rem 2rem;
-    background: #252525;
+    background: rgba(37, 37, 37, 0.35);
     padding: 1rem;
 }
 aside h5 {
@@ -238,32 +248,35 @@ aside p {
     text-align: justify;
 }
 section:nth-of-type(2){
-    background: rgba(28, 25, 41, 0.97);
+    background: rgba(28, 25, 41, 0.98);
+}
+section:nth-of-type(2) a {
+    color: #a8a0da;
 }
 section:nth-of-type(2) a.cta {
     color: #fff;
-    border-color: #322D4A;
+    border-color: #6b6891;
 }
-section:nth-of-type(2) a.cta:before {
-    background: #322D4A;
+section:nth-of-type(2) a.cta:before, nav ul li:nth-of-type(2) a:before {
+    background: #6b6891;
 }
 
 section:nth-of-type(3){
-    background: rgba(74, 56, 67, 0.97);
+    background: rgba(74, 56, 67, 0.98);
 }
 section:nth-of-type(3) a {
-    color: #cc87ad;
+    color: #e6a7cb;
 }
 section:nth-of-type(3) a.cta {
     color: #fff;
-    border-color: #cc87ad;
+    border-color: #905b79;
 }
-section:nth-of-type(3) a.cta:before {
-    background: #cc87ad;
+section:nth-of-type(3) a.cta:before, nav ul li:nth-of-type(3) a:before {
+    background: #905b79;
 }
 
 section:nth-of-type(4) {
-    background: rgba(14, 88, 28, 0.97);
+    background: rgba(14, 88, 28, 0.98);
 }
 section:nth-of-type(4) a {
     color: #c0ffc3;
@@ -272,38 +285,53 @@ section:nth-of-type(4) a.cta {
     color: #fff;
     border-color: #24a93b;
 }
-section:nth-of-type(4) a.cta:before {
+section:nth-of-type(4) a.cta:before, nav ul li:nth-of-type(4) a:before {
     background: #24a93b;
 }
 
 section:nth-of-type(5){
-    background: rgba(82, 29, 29, 0.96);
+    background: rgba(29, 82, 82, 0.98);
 }
 section:nth-of-type(5) a {
-    color: #ec7d7a;
+    color: #6bb5b5;
 }
 section:nth-of-type(5) a.cta {
     color: #fff;
-    border-color: #9c4e4e;
+    border-color: #6bb5b5;
 }
-section:nth-of-type(5) a.cta:before {
-    background: #9c4e4e;
+section:nth-of-type(5) a.cta:before, nav ul li:nth-of-type(5) a:before {
+    background: #6bb5b5;
 }
 
 section:nth-of-type(6){
-    background: rgba(47, 65, 84, 0.95);
+    background: rgba(160, 107, 28, 0.98);
 }
+section:nth-of-type(6) a {
+    color: #dcaa5f;
+}
+section:nth-of-type(6) a.cta {
+    color: #fff;
+    border-color: #dcaa5f;
+}
+section:nth-of-type(6) a.cta:before, nav ul li:nth-of-type(6) a:before {
+    background: #dcaa5f;
+}
+/*section:nth-of-type(6){*/
+    /*background: rgba(48, 36, 70, 0.98);*/
+/*}*/
+/*section:nth-of-type(6) a.cta {*/
+    /*color: #fff;*/
+    /*border-color: #673AB7;*/
+/*}*/
+/*section:nth-of-type(6) a.cta:before, nav ul li:nth-of-type(6) a:before {*/
+    /*background: #673AB7;*/
+/*}*/
 
 section:nth-of-type(7){
-    background: rgba(48, 36, 70, 0.97);
+    background: rgba(47, 65, 84, 0.98);
 }
-section:nth-of-type(7) a.cta {
-    color: #fff;
-    border-color: #673AB7;
-}
-section:nth-of-type(7) a.cta:before {
-    background: #673AB7;
-}
+
+
 
 
 
@@ -346,7 +374,13 @@ footer p {
         display: block;
         width: 100%;
     }
-    .menu.float-right {
-        float: none !important;
+
+
+
+    aside {
+        float: none;
+        width: 100%;
+        display: block;
+        margin: 2rem auto;
     }
 }

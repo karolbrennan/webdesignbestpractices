@@ -14,12 +14,10 @@
 </head>
 
 <header>
-    <div class="row">
+    <div class="row expanded">
         <div class="small-12 columns">
             <h1><a href="/" class="logo"><?= $sitetitle; ?></a></h1>
             <?php include("../includes/nav.php"); ?>
         </div>
     </div>
 </header>
-
-<div id="container">

@@ -3,6 +3,18 @@
         <div class="small-12 columns">
         <h1>Development</h1>
         <h2>If your site doesn't function well, people won't bother to use it.</h2>
+        <aside>
+            <h5>Search Engine Optimization</h5>
+
+            <h6>Tips for hitting the top of Google</h6>
+            <ul>
+                <li>Research keywords that will be effective in getting your site to the top of the search engine results.</li>
+                <li>Use selected keywords throughout your headings and content to ensure they're picked up by search engines.</li>
+                <li>Create unique, informative, great quality content. Do not copy and paste random stuff off of other sites!</li>
+                <li>Ensure that headings are descriptive.</li>
+                <li>Make URLs easy to read and descriptive.</li>
+            </ul>
+        </aside>
 
         <h3>Clean, Meaningful, and Semantic Code</h3>
         <p>This is really important. Make sure your code is clean and properly nested and that it - <em>above all else</em> - makes sense in its context. If it's a blog, use article and aside tags. If it's a header, use the header tag, same with footers. Sections of content should use the section tag. Navigation items should use the nav tag. There are a lot of new HTML tags that were introduced in HTML5 to assist in semantic coding. Check them out on the <a href="http://www.w3schools.com/html/html5_new_elements.asp" title="Visit the W3Schools website to view a full listing of HTML5 tags">W3 Schools website</a>.</p>
@@ -46,18 +58,7 @@
             <li><strong>Do</strong> encourage interaction with Twitter and Facebook integration on your site in a non-intrusive way.</li>
         </ul>
 
-        <h3>Search Engine Optimization</h3>
-
-        <h4>Tips for hitting the top of Google</h4>
-        <ul>
-            <li>Research keywords that will be effective in getting your site to the top of the search engine results.</li>
-            <li>Use selected keywords throughout your headings and content to ensure they're picked up by search engines.</li>
-            <li>Create unique, informative, great quality content. Do not copy and paste random stuff off of other sites!</li>
-            <li>Ensure that headings are descriptive.</li>
-            <li>Make URLs easy to read and descriptive.</li>
-        </ul>
-
-        <p class="text-center calltoaction"><a href="#" data-target="testing" data-section="development" class="cta">Time for testing!</a></p>
+        <p class="text-center calltoaction"><a data-target="testing" data-section="development" class="cta">Time for testing!</a></p>
         </div>
     </div>
 </section>
