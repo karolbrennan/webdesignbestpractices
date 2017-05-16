@@ -40,7 +40,7 @@
     $('.cta, .nav-item, .link').on('click', function(){
         var target = this.getAttribute('data-target');
         $('.active-item').removeClass('active-item');
-        $(this).addClass('active-item');
+        $('.nav-item[data-target=' + target + ']').addClass('active-item');
         $('.unfocus').removeClass('unfocus');
         $('.focus').removeClass('focus').addClass('unfocus');
         $('#' + target).addClass('focus');
