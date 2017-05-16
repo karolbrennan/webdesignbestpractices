@@ -187,6 +187,7 @@ p {
 section {
     position: absolute;
     bottom: 0;
+    right: -100%;
     opacity: 0;
     padding: 10vh 1rem;
     width: 100vw;
@@ -194,26 +195,13 @@ section {
     z-index: 0;
     transition: all 1.5s ease 0.5s;
 }
-section:nth-of-type(odd) {
-    left: -100%;
-}
-section:nth-of-type(even){
-    right: -100%;
-}
-section:nth-of-type(odd).focus {
-    left: 0;
-}
-section:nth-of-type(even).focus {
-    right: 0;
-}
-section.unfocus {
-    transition: all 0.5s ease 0.25s;
-}
 section.focus {
+    right: 0;
     opacity: 1;
     overflow-y: scroll;
 }
 section.unfocus {
+    transition: all 0.5s ease 0.25s;
     left: 0;
     right: 0;
     bottom: -100vh;
