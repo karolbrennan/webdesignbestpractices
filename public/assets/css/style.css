@@ -242,6 +242,7 @@ section.unfocus {
     bottom: 0 !important;
     right: 0 !important;
     display: flex;
+    overflow: hidden !important;
 }
 #index > div {
     display: flex;
