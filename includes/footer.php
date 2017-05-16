@@ -8,11 +8,11 @@
     </div>
 </footer>
 
-<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
-<script src="https://cdn.jsdelivr.net/g/foundation@6.2.1(foundation.min.js+js/foundation.dropdown.js+js/foundation.dropdownMenu.js)"></script>
+<script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
 <script>
-    $(document).foundation();
-
     function checkScreenSize(){
         var newWindowWidth = $(window).width();
         if (newWindowWidth < 500) {
