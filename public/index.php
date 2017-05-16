@@ -1,6 +1,6 @@
 <?php require_once("../includes/header.php"); ?>
 
-<section id="index">
+<section id="index" class="focus">
     <div class="row">
         <div class="small-12 text-center columns">
             <h1>So, you want to build a website?</h1>

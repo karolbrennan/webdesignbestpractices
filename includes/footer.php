@@ -52,10 +52,9 @@
         $('section').bind('scroll', fixHeader);
     });
 
-//    $('#menutoggle').on('click', function(){
-//        $('nav').toggle();
-//        $('header').toggleClass('menu-open');
-//    });
+    $('#menutoggle').on('click', function(){
+        $('nav').toggle().toggleClass('open');
+    });
 
 
 </script>

@@ -14,6 +14,8 @@ $menuItems = [
 ];
 
 ?>
+
+<div id="menutoggle"><i class="fa fa-bars"></i></div>
 <nav>
     <ul>
         <?php

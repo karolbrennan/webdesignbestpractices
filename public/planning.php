@@ -40,7 +40,7 @@
                 <p>These are unique parts of the planning process that need to be implemented in a "simple redesign."</p>
                 <p>A heuristic analysis is when usability tests are conducted by completing specific tasks on the website. These analyses will reveal problem areas that can then be addressed, giving the user a better experience.</p>
                 <p>Task flows consist of determining what the primary tasks are on the existing site, documenting how they are presently achieved, and pinpointing any potential improvement areas.</p>
-                <h4>So never think that a redesign should be "simple"</h4>
+                <h4>Never think that a redesign should be "simple"</h4>
                 <p>So much more goes into a redesign than just changing the color palette and layout. And tackling it head-on with a full plan will allow for accurate quotes/estimates, ensuring that you don't short-change yourself.</p>
                 <p class="text-center calltoaction"><a data-target="content" data-section="planning" class="cta">Let's Create Content!</a></p>
             </article>

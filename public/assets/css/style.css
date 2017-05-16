@@ -92,6 +92,14 @@ header h1, header nav {
 }
 
 /*/--------------// Navigation //--------------/*/
+#menutoggle {
+    display: none;
+    float: right;
+    margin-right: 1rem;
+}
+#menutoggle:hover {
+    cursor: pointer;
+}
 nav {
     text-align: right;
 }
@@ -218,7 +226,7 @@ section.unfocus {
 }
 #index {
     opacity: 1;
-    background: linear-gradient(rgba(35, 34, 20, 0.7), rgba(35, 34, 20, 0.7)), url(../img/desk-lauren-mancke.jpg) fixed;
+    background: linear-gradient(rgba(35, 34, 20, 0.7), rgba(35, 34, 20, 0.7)), url(../img/desktop.png) fixed;
     background-blend-mode: multiply;
     background-size: cover;
     position: fixed;
@@ -357,25 +365,22 @@ footer p {
     #menutoggle {
         display: block;
     }
-    nav {
+    header nav {
         display: none;
         text-align: center;
     }
-    nav.open {
-        display: block;
+    header nav.open {
+        float: right;
+        width: auto;
+        margin: 2rem -1rem 0 0;
+        text-align: right;
+        background: rgba(0,0,0,0.5);
     }
-    nav .menu {
-        display: block;
-    }
-    nav .columns {
-        padding: 0;
-    }
-    .menu > li{
+    header nav.open li {
         display: block;
         width: 100%;
+        padding: 0.5em 0;
     }
-
-
 
     aside {
         float: none;
