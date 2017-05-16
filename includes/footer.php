@@ -15,6 +15,23 @@
 <script src="https://cdn.jsdelivr.net/g/foundation@6.2.1(foundation.min.js+js/foundation.dropdown.js+js/foundation.dropdownMenu.js)"></script>
 <script>
     $(document).foundation();
+    $('.cta').on('click', function(){
+        var target = this.getAttribute('data-target');
+        $('.active-item').removeClass('active-item');
+        $(this).addClass('active-item');
+        $('.unfocus').removeClass('unfocus');
+        $('.focus').removeClass('focus').addClass('unfocus');
+        $('#' + target).addClass('focus');
+    });
+    $('.nav-item').on('click', function(){
+        var target = this.getAttribute('data-target');
+        $('.active-item').removeClass('active-item');
+        $(this).addClass('active-item');
+        $('.unfocus').removeClass('unfocus');
+        $('.focus').removeClass('focus').addClass('unfocus');
+        $('#' + target).addClass('focus');
+    });
+
 </script>
 
 </body>

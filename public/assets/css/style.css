@@ -3,20 +3,69 @@
     outline: none;
 }
 body {
-    background: linear-gradient(rgba(35, 34, 20, 0.7), rgba(35, 34, 20, 0.7)), url(../img/desk-lauren-mancke.jpg) fixed;
-    background-blend-mode: multiply;
-    background-size: cover;
+    background: #c1b298;
     color: #fff;
-    overflow-x: hidden;
-}
+    overflow: hidden !important;
+    animation: load 4s ease forwards;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 
+}
+@keyframes load {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    25% {
+        display: none;
+        opacity: 0;
+    }
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+@keyframes loadSection {
+    0% {
+        opacity: 0;
+        display: none;
+    }
+    25% {
+        opacity: 0;
+        display: none;
+    }
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+#index > div {
+    opacity: 0;
+    animation: load 4s ease 2s forwards;
+}
+.intro {
+    opacity: 0;
+    animation: load 4s ease 4s forwards;
+}
+#index .calltoaction {
+    opacity: 0;
+    animation: load 4s ease 6s forwards;
+}
+header {
+    animation: load 15s ease 0s forwards;
+}
 
 /*/--------------// Header //--------------/*/
 header {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 999;
+    z-index: 99999;
     padding: 1rem 0;
 }
 header h1 a, header h1 a:hover {
@@ -25,52 +74,56 @@ header h1 a, header h1 a:hover {
 header h1 {
     margin: 0;
     font-size: 1.75rem;
+    width: 20%;
 }
-
+header nav {
+    width: 78%;
+}
 header h1, header nav {
     display: inline-block;
     vertical-align: middle;
-    width: 49.5%;
 }
 
 /*/--------------// Navigation //--------------/*/
 nav {
     text-align: right;
 }
-nav > .menu {
+nav ul {
+    list-style: none;
     margin: 0;
     padding: 0;
-    width: 100%;
 }
-nav > .menu > li {
+nav ul li {
     display: inline-block;
-    vertical-align: middle;
-    text-align: center;
-    padding: 0.25rem;
-    width: 14.25%;
+    vertical-align: top;
 }
-nav > .menu > li > a {
+nav ul li a {
+    font-size: 1rem;
     color: #fff;
-    text-transform: uppercase;
-    padding: 0.25rem 0;
+    display: block;
+    width: 100%;
+    padding: 0 1em;
+    transition: all ease 1.5s;
+    position: relative;
 }
-nav > .menu > li > a:hover {
-    color: #b5b074;
+nav ul li:hover a {
+    cursor: pointer;
 }
-nav > .menu > li > a:after {
-    display: none !important;
+nav ul li a:before {
+    content: ' ';
+    width: 0;
+    height: 0.2em;
+    background: #4e96a7;
+    position: absolute;
+    left: 50%;
+    bottom: -0.5em;
+    transition: all ease 2s;
 }
-nav > .menu .submenu {
-    background: #fff;
-    border-radius: 0.2rem;
-    text-align: right;
-    width: auto;
+nav ul li a:hover:before, nav .active-item:before {
+    width: 100%;
+    left: 0;
 }
-.is-dropdown-submenu {
-    background: transparent;
-    text-align: right;
-    border: none;
-}
+
 
 /*/--------------// Typography & Links //--------------/*/
 
@@ -87,7 +140,7 @@ h2 {
 a {
     color: #4e96a7;
 }
-a:hover {
+a:hover, a:focus, a:active {
     color: #fff;
 }
 .calltoaction {
@@ -100,10 +153,29 @@ a:hover {
     border-radius: 0.2rem;
     padding: 0.5rem 1rem;
     font-size: 1.5rem;
+    transition: all 1s ease 1s;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+}
+.cta:before {
+    background: #4e96a7;
+    content: ' ';
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease 0.25s;
+    z-index: -1;
+}
+.cta:hover:before {
+    left: 0;
 }
 .cta:hover {
-    color: rgba(255, 255, 255, 0.76);
-    border: 2px solid #467b8c;
+    color: #fff;
+    cursor: pointer;
 }
 p {
     font-size: 1.25rem;
@@ -112,13 +184,57 @@ p {
 
 /*/--------------// Content //--------------/*/
 
-#index {
-    padding: 35vh 0;
-}
 section {
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
     padding: 10vh 1rem;
-    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    transition: all 1.5s ease 0.5s;
 }
+section:nth-of-type(odd) {
+    left: -100%;
+}
+section:nth-of-type(even){
+    right: -100%;
+}
+section:nth-of-type(odd).focus {
+    left: 0;
+}
+section:nth-of-type(even).focus {
+    right: 0;
+}
+section.unfocus {
+    transition: all 0.5s ease 0.25s;
+}
+section.focus {
+    opacity: 1;
+    overflow-y: scroll;
+}
+section.unfocus {
+    left: 0;
+    right: 0;
+    bottom: -100vh;
+}
+#index {
+    opacity: 1;
+    background: linear-gradient(rgba(35, 34, 20, 0.7), rgba(35, 34, 20, 0.7)), url(../img/desk-lauren-mancke.jpg) fixed;
+    background-blend-mode: multiply;
+    background-size: cover;
+    position: fixed;
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    display: flex;
+}
+#index > div {
+    display: flex;
+    align-items: center;
+}
+
 aside {
     float: right;
     width: 18rem;
@@ -133,24 +249,73 @@ aside p {
     font-size: 1rem;
     text-align: justify;
 }
-/*section:nth-of-type(2){*/
-    /*background: rgb(28, 25, 41);*/
-/*}*/
-/*section:nth-of-type(3){*/
-    /*background: rgba(46, 46, 46, 0.85);*/
-/*}*/
-/*section:nth-of-type(4){*/
-    /*background: rgba(57, 57, 57, 0.76);*/
-/*}*/
-/*section:nth-of-type(5){*/
-    /*background: #3e3e3e;*/
-/*}*/
-/*section:nth-of-type(6){*/
-    /*background: rgba(73, 73, 73, 0.91);*/
-/*}*/
-/*section:nth-of-type(7){*/
-    /*background: rgba(78, 78, 78, 0.85);*/
-/*}*/
+section:nth-of-type(2){
+    background: rgba(28, 25, 41, 0.97);
+}
+section:nth-of-type(2) a.cta {
+    color: #fff;
+    border-color: #322D4A;
+}
+section:nth-of-type(2) a.cta:before {
+    background: #322D4A;
+}
+
+section:nth-of-type(3){
+    background: rgba(74, 56, 67, 0.97);
+}
+section:nth-of-type(3) a {
+    color: #cc87ad;
+}
+section:nth-of-type(3) a.cta {
+    color: #fff;
+    border-color: #cc87ad;
+}
+section:nth-of-type(3) a.cta:before {
+    background: #cc87ad;
+}
+
+section:nth-of-type(4) {
+    background: rgba(14, 88, 28, 0.97);
+}
+section:nth-of-type(4) a {
+    color: #c0ffc3;
+}
+section:nth-of-type(4) a.cta {
+    color: #fff;
+    border-color: #24a93b;
+}
+section:nth-of-type(4) a.cta:before {
+    background: #24a93b;
+}
+
+section:nth-of-type(5){
+    background: rgba(82, 29, 29, 0.96);
+}
+section:nth-of-type(5) a {
+    color: #ec7d7a;
+}
+section:nth-of-type(5) a.cta {
+    color: #fff;
+    border-color: #9c4e4e;
+}
+section:nth-of-type(5) a.cta:before {
+    background: #9c4e4e;
+}
+
+section:nth-of-type(6){
+    background: rgba(47, 65, 84, 0.95);
+}
+
+section:nth-of-type(7){
+    background: rgba(48, 36, 70, 0.97);
+}
+section:nth-of-type(7) a.cta {
+    color: #fff;
+    border-color: #673AB7;
+}
+section:nth-of-type(7) a.cta:before {
+    background: #673AB7;
+}
 
 
 
@@ -164,6 +329,11 @@ footer {
 }
 footer * {
     font-size: 0.8rem;
+}
+footer p {
+    display: inline-block;
+    background: rgba(0,0,0,0.2);
+    padding: 0.25em 1em;
 }
 
 /*/--------------// Media Queries //--------------/*/

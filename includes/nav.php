@@ -4,61 +4,23 @@
  * Values: title, url, submenu (array of more menu items, can be nested)
  */
 $menuItems = [
-    ['name' => 'Menu', 'url' => '#', 'submenu' => [
-        ['name' => 'Intro', 'url' => '#intro', 'title' => 'Lets learn the best practices for building a website!'],
-        ['name' => 'Planning', 'url' => '#planning', 'title' => 'Learn best practices for planning a web site project'],
-        ['name' => 'Content', 'url' => '#content', 'title' => 'Learn best practices for generating content'],
-        ['name' => 'Design', 'url' => '#design', 'title' => 'Learn best practices for beautiful, effective design'],
-        ['name' => 'Development', 'url' => '#development', 'title' => 'Learn best practices of development'],
-        ['name' => 'Testing', 'url' => '#testing', 'title' => 'Learn best practices of testing your finished site'],
-        ['name' => 'Follow Up', 'url' => '#followup', 'title' => 'Learn best practices of maintaining relationships and websites']
-        ]
-    ]
+//    ['name' => 'Intro', 'url' => '#intro', 'title' => 'Lets learn the best practices for building a website!', 'data-target' => 'intro'],
+    ['name' => 'Planning', 'url' => '#planning', 'title' => 'Learn best practices for planning a web site project', 'data-target' => 'planning'],
+    ['name' => 'Content', 'url' => '#content', 'title' => 'Learn best practices for generating content', 'data-target' => 'content'],
+    ['name' => 'Design', 'url' => '#design', 'title' => 'Learn best practices for beautiful, effective design', 'data-target' => 'design'],
+    ['name' => 'Development', 'url' => '#development', 'title' => 'Learn best practices of development', 'data-target' => 'development'],
+    ['name' => 'Testing', 'url' => '#testing', 'title' => 'Learn best practices of testing your finished site', 'data-target' => 'testing'],
+    ['name' => 'Follow Up', 'url' => '#followup', 'title' => 'Learn best practices of maintaining relationships and websites', 'data-target' => 'followup']
 ];
-
-function getMenuItems(array $menuItems){
-    $currentUrl = $_SERVER["REQUEST_URI"];
-    foreach($menuItems as $menuItem){
-        $class = ($currentUrl === $menuItem['url']) ? 'active' : '';
-        $url = $menuItem['url'];
-        $name = $menuItem['name'];
-        $title = $menuItem['title'];
-
-        echo "<li class='" . ((!empty($menuItem['submenu'])) ? 'is-dropdown-submenu-parent' : '') . " {$class}' role='menuitem'>
-              <a href='{$url}' title='{$title}'>{$name}</a>";
-                if(!empty($menuItem['submenu'])){
-                    echo "<ul class='menu submenu " . ((!empty($menuItem['submenu'])) ? 'is-dropdown-submenu' : '') . "' data-submenu role='menu'>";
-                    getSubMenuItems($menuItem['submenu']);
-                    echo "</ul>";
-                }
-        echo "</li>";
-    }
-}
-
-function getSubMenuItems(array $subMenuItems){
-    $currentUrl = $_SERVER["REQUEST_URI"];
-    foreach($subMenuItems as $menuItem){
-        $class = ($currentUrl === $menuItem['url']) ? ' active' : '';
-        $url = $menuItem['url'];
-        $title = $menuItem['title'];
-        $name = $menuItem['name'];
-
-        echo "<li class='is-submenu-item is-dropdown-submenu-item" . ((!empty($menuItem['submenu'])) ? ' is-dropdown-submenu-parent' : '') . " {$class}' role='menuitem'>
-              <a href='{$url}' title='{$title}'>{$name}</a>";
-        if(!empty($menuItem['submenu'])){
-            echo "<ul data-options='disableHover:true;clickOpen:true' class='menu submenu " . ((!empty($menuItem['submenu'])) ? 'is-dropdown-submenu' : '') . "' data-submenu role='menu'>";
-            getSubMenuItems($menuItem['submenu']);
-            echo "</ul>";
-        }
-        echo "</li>";
-    }
-}
-
 
 ?>
 <nav>
-    <ul class="dropdown menu" data-options='disableHover:true;clickOpen:true' data-dropdown-menu="dropdown-menu" role="menubar">
-        <?php getMenuItems($menuItems); ?>
+    <ul>
+        <?php
+            foreach($menuItems as $menuItem) {
+                echo "<li {$menuItem['class']} role='menuitem'><a href='{$menuItem['url']}' class='nav-item' title='{$menuItem['title']}' data-target='{$menuItem['data-target']}'>{$menuItem['name']}</a></li>";
+            }
+        ?>
     </ul>
 </nav>
 
