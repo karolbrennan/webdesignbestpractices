@@ -1,10 +1,10 @@
 <section id="testing">
     <div class="row">
         <div class="small-12 columns">
-            <h1>Testing</h1>
-            <h2>Get your site in front of anyone and everyone!</h2>
+            <h2>Testing</h2>
+            <h3>Get your site in front of anyone and everyone!</h3>
             <aside>
-                <h3>Tools</h3>
+                <h4>Tools</h4>
                 <p>Check out the following tools for testing your site.</p>
                 <ul>
                     <li><a href="https://developers.google.com/speed/pagespeed/">Google Page Speed Test</a></li>

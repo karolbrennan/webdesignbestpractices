@@ -3,7 +3,7 @@
 <section id="index" class="focus">
     <div class="row">
         <div class="small-12 text-center columns">
-            <h1>So, you want to build a website?</h1>
+            <h2>So, you want to build a website?</h2>
             <div class="intro"><p>From planning to deployment, and development to support.<br>Whether it's your personal site, or a project for a client.<br>Let this site guide you through building a web presence that is both informative and easy to use.</p></div>
             <p class="text-center calltoaction"><a class="cta" data-target="planning" data-section="index">Let's Get Started</a></p>
         </div>
