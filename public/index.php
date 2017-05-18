@@ -1,15 +1,20 @@
-<?php require("../includes/header.php"); ?>
+<?php require_once("../includes/header.php"); ?>
 
-<div class="row">
-    <div class="small-12 columns">
-        <h1>Hey There!</h1>
-        <h2>So, you want to build a website?</h2>
-        <p>There are many important aspects of building an effective website. From planning to project completion, from development to support. Whether it's your personal site, or a site you're building for a client.</p>
-        <p>Throughout this site, I will walk you through building a web presence that is both informative and easy to use.</p>
-
-        <p class="text-center calltoaction"><a class="cta" href="/planning">Let's Get Started</a></p>
-
+<section id="index" class="focus">
+    <div class="row">
+        <div class="small-12 text-center columns">
+            <h2>So, you want to build a website?</h2>
+            <div class="intro"><p>From planning to deployment, and development to support.<br>Whether it's your personal site, or a project for a client.<br>Let this site guide you through building a web presence that is both informative and easy to use.</p></div>
+            <p class="text-center calltoaction"><a class="cta" data-target="planning" data-section="index">Let's Get Started</a></p>
+        </div>
     </div>
-</div>
+</section>
 
-<?php require("../includes/footer.php"); ?>
+<?php
+    require_once('planning.php');
+    require_once('content.php');
+    require_once('design.php');
+    require_once('development.php');
+    require_once('testing.php');
+    require_once('followup.php');
+    require_once("../includes/footer.php"); ?>

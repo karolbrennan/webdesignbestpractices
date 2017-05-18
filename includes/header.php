@@ -1,28 +1,32 @@
-<?php $sitetitle = 'Web Design Best Practices'; ?>
+<?php $sitetitle = 'WDBP.';?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title><?= $sitetitle; ?></title>
+    <title><?= $sitetitle;?></title>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="">
+    <meta name="description" content="From planning to deployment, and development to support. Whether it's your personal site, or a project for a client. Let this site guide you through building a web presence that is both informative and easy to use.">
+    <meta property="og:image" content="http://webdesignbestpractices.com/assets/img/ogimage.png">
+    <meta name="keywords" content="Web Design Best Practices, Web Design Best Practices 2017, Web Design Trends, Web Design, Web Development, Web Development Best Practices">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@codemasterkarol" />
+    <meta name="twitter:title" content="Web Design Best Practices" />
+    <meta name="twitter:description" content="From planning to deployment, and development to support. Whether it's your personal site, or a project for a client. Let this site guide you through building a web presence that is both informative and easy to use." />
+    <meta name="twitter:image" content="http://webdesignbestpractices.com/assets/img/ogimage.png" /><meta name="twitter:image:alt" content="Web Design Best Practices Site Preview" />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/g/foundation@6.2.1(foundation.min.css),foundation-icons@3.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:700">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/g/foundation@6.2.1(foundation.min.css)">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/font-awesome.css">
     <link rel="stylesheet" href="/assets/css/style.css">
-    <meta property="og:image" content="assets/ogimage.png"/>
+
 </head>
 
 <header>
-    <div class="row">
+    <div class="row expanded">
         <div class="small-12 columns">
-            <a href="/" class="logo"><?= $sitetitle; ?></a>
+            <h1><a href="/" class="logo"><?= $sitetitle; ?></a></h1>
+            <?php include("../includes/nav.php"); ?>
         </div>
     </div>
 </header>
-
-<?php include("../includes/nav.php"); ?>
-
-<section id="content">

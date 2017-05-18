@@ -1,10 +1,6 @@
-
-</section>
-
 <footer>
-    <div class="row">
+    <div class="row expanded">
         <div class="small-12 medium-4 columns">
-            <p><a href="/"><?= $sitetitle; ?></a></p>
         </div>
         <div class="small-12 medium-8 columns text-right">
             <p>&copy; 2016-<?= date('Y'); ?> <a href="http://karolbrennan.com">Karol Brennan</a></p>
@@ -12,14 +8,59 @@
     </div>
 </footer>
 
-<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
-<script src="https://cdn.jsdelivr.net/g/foundation@6.2.1(foundation.min.js+js/foundation.dropdown.js+js/foundation.dropdownMenu.js)"></script>
+<script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
 <script>
-    $(document).foundation();
+    function checkScreenSize(){
+        var newWindowWidth = $(window).width();
+        if (newWindowWidth < 500) {
+            console.log('small window');
+            $('.focus aside').insertBefore('.focus .calltoaction');
+        } else {
+            $('.focus aside').insertAfter('.focus h2');
+        }
+    }
+
+    function fixHeader(e) {
+        var elem = $(e.currentTarget);
+        if(elem[0].scrollTop > 1){
+            $('header').addClass('fixed');
+        } else {
+            $('header').removeClass('fixed');
+        }
+    }
+
+    $(window).on("resize", function (e) {
+        checkScreenSize();
+        console.log('change window size');
+    });
+
+    $('.cta, .nav-item, .link').on('click', function(){
+        var target = this.getAttribute('data-target');
+        $('.active-item').removeClass('active-item');
+        $('.nav-item[data-target=' + target + ']').addClass('active-item');
+        $('.unfocus').removeClass('unfocus');
+        $('.focus').removeClass('focus').addClass('unfocus');
+        $('#' + target).addClass('focus');
+        checkScreenSize();
+    });
+
+    $(document).ready(function () {
+        checkScreenSize();
+        $('section').bind('scroll', fixHeader);
+    });
 
     $('#menutoggle').on('click', function(){
         $('nav').toggleClass('open');
+
+        $('nav.open .nav-item').on('click', function(){
+            $('nav').removeClass('open');
+        })
     });
+
+
 </script>
 
 <script>
