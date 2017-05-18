@@ -53,7 +53,11 @@
     });
 
     $('#menutoggle').on('click', function(){
-        $('nav').toggle().toggleClass('open');
+        $('nav').toggleClass('open');
+
+        $('nav.open .nav-item').on('click', function(){
+            $('nav').removeClass('open');
+        })
     });
 
 

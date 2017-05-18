@@ -17,7 +17,7 @@ $menuItems = [
 
 <div id="menutoggle"><i class="fa fa-bars"></i></div>
 <nav>
-    <ul>
+    <ul role="menu">
         <?php
             foreach($menuItems as $menuItem) {
                 echo "<li {$menuItem['class']} role='menuitem'><a class='nav-item' title='{$menuItem['title']}' data-target='{$menuItem['data-target']}'>{$menuItem['name']}</a></li>";
