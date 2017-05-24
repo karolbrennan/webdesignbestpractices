@@ -1,6 +1,7 @@
 <footer>
     <div class="row expanded">
         <div class="small-12 medium-4 columns">
+            <p>Check out this project on <a href="http://github.com/karolbrennan/webdesignbestpractices">GitHub</a></p>
         </div>
         <div class="small-12 medium-8 columns text-right">
             <p>&copy; 2016-<?= date('Y'); ?> <a href="http://karolbrennan.com">Karol Brennan</a></p>
