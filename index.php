@@ -1,4 +1,4 @@
-<?php require_once("../includes/header.php"); ?>
+<?php require_once("includes/header.php"); ?>
 
 <section id="index" class="focus">
     <div class="row">
@@ -17,4 +17,4 @@
     require_once('development.php');
     require_once('testing.php');
     require_once('followup.php');
-    require_once("../includes/footer.php"); ?>
+    require_once("includes/footer.php"); ?>
