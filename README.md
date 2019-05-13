@@ -5,15 +5,11 @@ This is a collection of things I have learned about Web Design over the years an
 http://webdesignbestpractices.com
 
 ## Technology
-This site is very stripped down and simple. It's just HTML, CSS, basic PHP with a little bit of JavaScript. 
-
-### Development
-This project is built on the back of my own custom [Vagrant Box](https://github.com/codemasterkarol/vagrantbox)
+This site is very stripped down and simple. It's just HTML, CSS, and a little bit of JavaScript. 
 
 ### Languages Used
 - HTML
 - CSS
-- PHP
 - JavaScript
 
 ### Frameworks / Libraries Used
